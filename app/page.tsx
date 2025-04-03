@@ -1,7 +1,19 @@
 import Image from 'next/image'
 
 export default function MyApp() {
-  return (<div className="w-[80%] border rounded p-4 m-auto">
+  return (<div 
+    className="w-[80%] border rounded p-4 m-auto bg-slate-100 
+     grid 
+    grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4"
+    >
+      {/* grid-cols-1 gap-4 
+      sm:grid-cols-2
+      md:grid-cols-3
+      lg:grid-cols-4
+      xl:grid-cols-5
+
+      flex flexwrap */}
+
     <h1 className="text-2xl font-bold m-2 p-2">Hello world!!</h1>
 
     <Image
