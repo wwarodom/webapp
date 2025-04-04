@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Bungee_Tint } from "next/font/google";
+import Link from 'next/link';
 
 const bungee = Bungee_Tint({
   subsets: ["latin"],
@@ -7,16 +8,16 @@ const bungee = Bungee_Tint({
 });
 
 export default function MyApp() {
-  return (<div>
-    {/* grid-cols-1 gap-4 
-      sm:grid-cols-2
-      md:grid-cols-3
-      lg:grid-cols-4
-      xl:grid-cols-5
-
-      flex flexwrap */}
-
+  return (<div>  
     <h1 className={`${bungee.className} "font-bold m-2 p-2"`}>Hello world!!</h1>
+
+      <Link 
+        className='text-blue-800 block border-2 border-black p-2 m-2 w-fit mb-8'
+        href="/products" 
+        >
+          Go to Product Page
+      </Link>
+
 
     <div className="w-[80%] border rounded p-4 m-auto bg-slate-100 
      grid 
