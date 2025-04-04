@@ -1,8 +1,8 @@
 export default function Products() {
     return (
         <div>
-            <h1 className="font-bold text-xl m-4">Product</h1>
-            <div className="flex flex-wrap m-auto justify-center w-[80%] border rounded m-4 p-4 bg-slate-100">
+            <h1 className="font-bold text-2xl text-center my-4">Product</h1>
+            <div className="flex flex-wrap m-auto justify-center w-[80%] border rounded m-4 p-4 bg-slate-100 mb-6">
                 <div className="shadow-lg rounded-md border w-fit bg-green-200 p-2 m-2">
                     <h2>1. Computer:</h2>
                     <p>Product description goes here.</p>
