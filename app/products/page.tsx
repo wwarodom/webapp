@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Footer from "../components/Footer";
 import ProductItem from "../components/ProductItem";
 export default function Products() {
 
@@ -46,7 +46,8 @@ export default function Products() {
                 })
             }
         </div>
-        <footer className="bg-blue-200 p-2 text-center font-bold text-xl"> ..:: Product footer ::.. </footer>
+
+        <Footer />
     </div>
     )
 }

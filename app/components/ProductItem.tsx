@@ -18,5 +18,4 @@ export default function ProductItem(
             <button className="border bg-pink-200 px-2 py-1 mt-2 rounded hover:font-bold">Buy Now</button>
             <span className="absolute bottom-2 right-2 border-2  border-blue shadow px-2 rounded-full bg-amber-400 hover:translate-2 hover:rotate-45 hover:bg-green-600">{index + 1}</span>
         </div>)
-  )
 }
