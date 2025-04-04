@@ -35,7 +35,7 @@ export default function Products() {
                 products.map((product, index) => {
                     return (
                         <div key={index} 
-                        className="relative shadow-lg rounded-md border w-fit bg-green-100 p-2 m-2">
+                        className="relative shadow-lg rounded-md border w-fit bg-green-100 p-2 m-2 hover:translate-2 hover:rotate-15">
                             <h2 className="font-bold shadow-2xl">{product.name}</h2>
                             <p>{product.description}</p>
                             <Image
