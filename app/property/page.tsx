@@ -1,6 +1,5 @@
 import B from "../components/B"
-import Header from "../components/Header"
-
+ 
 export default function Property() {
 
     const person = {
@@ -8,8 +7,7 @@ export default function Property() {
         age: 30,
     }
 
-    return (<div>
-        <Header />
+    return (<div> 
 
         <h1>Property</h1>
         <div>This is: 

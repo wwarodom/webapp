@@ -1,4 +1,4 @@
-import Footer from "../components/Footer";
+import Footer from "../components/Footer"; 
 import ProductItem from "../components/ProductItem";
 export default function Products() {
 
