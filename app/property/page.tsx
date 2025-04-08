@@ -1,4 +1,5 @@
 import B from "../components/B"
+import Header from "../components/Header"
 
 export default function Property() {
 
@@ -8,6 +9,8 @@ export default function Property() {
     }
 
     return (<div>
+        <Header />
+
         <h1>Property</h1>
         <div>This is: 
             <A  foo="foo"  
