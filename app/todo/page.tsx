@@ -24,8 +24,12 @@ export default function Todo() {
                     </li>
                 ))}
             </ul>
-            <input type="text" placeholder="Add a new todo" />
-            <button>Add</button>
+            <input 
+                className="border-2 border-gray-300 rounded-lg p-2 m-2" 
+                type="text" placeholder="Add a new todo" />
+            <button
+                className="border-2 border-gray-300 rounded-lg p-2 m-2 bg-blue-500 text-white"
+                >Add</button>
         </div>
     </div>)
 }
