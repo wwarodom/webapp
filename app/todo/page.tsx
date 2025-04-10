@@ -23,6 +23,12 @@ export default function Todo() {
         setTask('')
     }
 
+    const deleteTask = (id: number) => { 
+        console.log("Id: ", id)  
+        const newTodos = todos.filter(todo => todo.id !== id) 
+        setTodos(newTodos)
+    }
+
     return (<div className="border-2 max-w-sm border-gray-300 rounded-lg mx-auto p-4">
         <h1 className="text-xl font-bold">Todo</h1>
         <div>
@@ -33,8 +39,13 @@ export default function Todo() {
                         <span className="mr-2"
                         >{todo.title}</span>
                         <input
+                            className="mr-2"
                             type="checkbox"
                             defaultChecked={todo.complete} />
+                        <button
+                            onClick={() => deleteTask(todo.id)} 
+                            className="border-2 border-gray-300 px-2 hover:bg-red-500 hover:text-white"
+                            > x </button>
                     </li>
                 ))}
             </ul>
