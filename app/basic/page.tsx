@@ -57,7 +57,6 @@ export default async function Basic() {
 
     const data = await promise
     console.log("Await:", data) // Hey    
-
     // setTimeout( () => console.log("SetTimeout") , 3000)
 
     const wait = (ms: number) => {
