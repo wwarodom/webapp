@@ -11,10 +11,18 @@ export default function Person() {
     })
     
     const handleChage = (e: React.ChangeEvent<HTMLInputElement>) => {   
-        const { name, value } = e.target
+        
+        // const name = e.target.name
+        // const value = e.target.value
+        
+        const { name, value } = e.target // destructuring
+
+        // const aObj = { x: 1, y: 2}
+        // const bObj = { ...aObj, y:3}   // { x: 1 , y: 3}
+
         setPerson({
-            ...person,
-            [name]: value
+            ...person,          // spread operator
+            [name]: value       // overwrite it on existing value
         })
     }   
   
