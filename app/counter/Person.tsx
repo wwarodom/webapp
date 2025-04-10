@@ -7,7 +7,8 @@ export default function Person() {
     const [person, setPerson] = useState({
         name: "Warodom Werapun",
         age: 30,
-        email: "warodom@werapun.com"
+        email: "warodom@werapun.com",
+        salary: 10000,
     })
     
     const handleChage = (e: React.ChangeEvent<HTMLInputElement>) => {   
@@ -36,6 +37,9 @@ export default function Person() {
             </div>
             <div className="bg-gray-200 p-2 rounded-md mb-2">
                 <b>Email:</b> {person.email}
+            </div>
+            <div className="bg-gray-200 p-2 rounded-md mb-2">
+                <b>Salary:</b> {person.salary}
             </div>
             <div> 
                 <label
@@ -67,6 +71,17 @@ export default function Person() {
                     type="email"
                     name="email"
                     value={person.email}
+                    onChange={handleChage}
+                />
+            </div>
+            <div> 
+                <label
+                    htmlFor="name">Salary</label>
+                <input
+                    className="border p-2 w-full rounded-md"
+                    type="number"
+                    name="salary"
+                    value={person.salary}
                     onChange={handleChage}
                 />
             </div>
