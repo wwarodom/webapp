@@ -5,10 +5,20 @@ import { useState } from "react"
 export default function Person() {
 
     const [name, setName] = useState("Warodom")
+    const [age, setAge] = useState(30)
+    const [email, setEmail] = useState("warodom@werapun.com")
 
     function handleName(e: React.ChangeEvent<HTMLInputElement>) {
         console.log(e.target.value)
         setName(e.target.value)
+    }
+    function handleAge(e: React.ChangeEvent<HTMLInputElement>) {
+        console.log(e.target.value)
+        setAge(e.target.value)
+    }
+    function handleEmail(e: React.ChangeEvent<HTMLInputElement>) {
+        console.log(e.target.value)
+        setEmail(e.target.value)
     }
 
     // Task: create other 2 inputs:
@@ -20,6 +30,12 @@ export default function Person() {
         <div className="max-w-sm border border-gray-200 rounded-lg shadow-md p-4 mx-auto">
             <div className="bg-gray-200 p-2 rounded-md mb-2">
                 <b>Person:</b> {name}
+            </div>
+            <div className="bg-gray-200 p-2 rounded-md mb-2">
+                <b>Age:</b> {age}
+            </div>
+            <div className="bg-gray-200 p-2 rounded-md mb-2">
+                <b>Email:</b> {email}
             </div>
             <div> 
                 <label
@@ -37,10 +53,10 @@ export default function Person() {
                     htmlFor="name">Age</label>
                 <input
                     className="border p-2 w-full rounded-md mb-4"
-                    type="text"
+                    type="number"
                     name="name"
-                    value={name}
-                    onChange={handleName}
+                    value={age}
+                    onChange={handleAge}
                 />
             </div>
             <div> 
@@ -48,10 +64,10 @@ export default function Person() {
                     htmlFor="name">Email</label>
                 <input
                     className="border p-2 w-full rounded-md"
-                    type="text"
+                    type="email"
                     name="name"
-                    value={name}
-                    onChange={handleName}
+                    value={email}
+                    onChange={handleEmail}
                 />
             </div>
 
