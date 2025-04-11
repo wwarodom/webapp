@@ -72,12 +72,8 @@ export default function Todo() {
                            (<span>{todo.title}</span>) 
                         }
                         
-                        
-
-
-
                         <input
-                            className="mr-8"
+                            className="w-6 h-6"
                             type="checkbox"
                             defaultChecked={todo.complete} /> 
                         <SquareX
