@@ -1,13 +1,26 @@
+'use client'
+
+import { useEffect, useState } from "react"
+
 type TPost = {
     title: string
     author: string
 }
 
-export default async function Fetch2() {
+export default function Fetch2() {
 
-    const data = await fetch('https://api.vercel.app/blog')
-    const posts = await data.json()
-    console.log("Posts: ", posts)
+    const [posts, setPosts] = useState<TPost[]>([])
+
+    useEffect(() => {
+        const fetch2API = async () => {
+            const data = await fetch('/api/vercel')
+            const posts = await data.json()
+            console.log("Posts: ", posts)
+            setPosts(posts)
+        }
+        fetch2API()
+    }, [])
+
 
     if (posts.length === 0) {
         // Check if profile is empty
@@ -19,12 +32,11 @@ export default async function Fetch2() {
         <ul>
             {
                 posts.map((post: TPost, index: number) => {
-                    if (index > 5 ) return ;
-
-                    return (<li 
+                    if (index > 4) return;
+                    return (<li
                         className="border border-gray-300 rounded mt-2 mr-2 p-4"
                         key={index}>
-                        {index+1}. Title: {post.title} <br />
+                        {index + 1}. Title: {post.title} <br />
                         Name: {post.author} <br />
                     </li>)
                 }
@@ -33,6 +45,11 @@ export default async function Fetch2() {
 
 
         </ul>
+
+        <button
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            onClick={() => console.log("Clicked")}
+        > Click </button>
 
     </div>)
 }
