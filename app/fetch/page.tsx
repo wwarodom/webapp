@@ -1,8 +1,18 @@
+'use client'
 import Image from 'next/image'
+import { useState } from 'react'
 
-export default async function FetchAPI() {
-    const data = await fetch('https://api.github.com/users/wwarodom')
-    const profile = await data.json()
+export default function FetchAPI() {
+
+    const [name, setName] = useState('wwarodom')
+    const [profile, setProfile] = useState({})
+
+
+    const fetchAPI = async () => {
+        const data = await fetch(`https://api.github.com/users/${name}`)
+        const profile = await data.json()
+        setProfile(profile)
+    }
 
     return (
         <div>
@@ -27,7 +37,17 @@ export default async function FetchAPI() {
                     <div>
                         id: {profile.id}
                     </div>
-
+                    <div>
+                        <input
+                            className='border border-gray-300 rounded mt-2 mr-2'
+                            type="text"
+                            onChange={(e) => setName(e.target.value)}
+                        />
+                        <button
+                            onClick={fetchAPI}
+                            className='border px-2'
+                        >Update</button>
+                    </div>
                 </div>
 
 
