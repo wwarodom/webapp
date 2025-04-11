@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from "react"
-import { Pencil, SquareX } from "lucide-react"
+import { Pencil, SquareX } from "lucide-react" // npm i lucide-react --save-dev
 
 export default function Todo() {
 
