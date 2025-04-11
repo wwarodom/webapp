@@ -40,7 +40,7 @@ export default function Todo() {
             ...todos.map( (todo) => {
                 if (todo.id === editId) {
                     return {
-                        ...todo,
+                        ...todo, 
                         title: e.target.value
                     }
                 }
